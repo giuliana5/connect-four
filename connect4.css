@@ -19,7 +19,7 @@ body {
 #board td {
   width: 75px;
   height: 75px;
-  border: solid 2px #666;
+  border: solid 2px white;
   background-color: #777777;
   opacity: .9;
 }
