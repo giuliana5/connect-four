@@ -5,13 +5,9 @@ const HEIGHT = 6;
 let currPlayer = 1; // active player: 1 or 2
 const board = []; // array of rows, each row is array of cells  (board[y][x])
 
-function makeBoard() {
-  // TODO: set "board" to empty HEIGHT x WIDTH matrix array
-}
-
 /** makeHtmlBoard: make HTML table and row of column tops. */
 function makeHtmlBoard() {
-
+  // get board from html
   const htmlBoard = document.getElementById('board');
 
   // create column buttons to drop the pieces
@@ -59,7 +55,7 @@ function placeInTable(y, x) {
   board[y][x] = currPlayer;
 }
 
-/** endGame: announce game end */
+/** endGame: announce game end or tie */
 const endGame = msg => {
   document.getElementById("column-top").removeEventListener("click", handleClick)
   setTimeout(() => {
@@ -127,6 +123,7 @@ function checkForWin() {
     }
   }
 }
+// function to restart the game
+const restartGame = () => window.location.reload();
 
-makeBoard();
 makeHtmlBoard();

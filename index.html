@@ -4,9 +4,16 @@
   <link href="connect4.css" rel="stylesheet">
 </head>
 <body>
-
+<h1>CONNECT FOUR</h1>
 <div id="game">
   <table id="board"></table>
+  <div id="extra">
+    <h2>Player 1 -<span id="red"></span></h2>
+    <h2>Player 2 -<span id="blue"></span></h2>
+    <div id="restart">
+      <input type="reset" value="↻" onclick="restartGame()">
+    </div>
+  </div>
 </div>
 
 <script src="connect4.js"></script>
